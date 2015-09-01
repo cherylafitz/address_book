@@ -11,11 +11,15 @@ module.exports = {
 
     firstname: {
       type: 'string',
-      required: true
+      required: true,
+      alpha: true,
+      maxLength: 30
     },
     lastname: {
       type: 'string',
-      required: true
+      required: true,
+      alpha: true,
+      maxLength: 50
     },
     notes: {
       type: 'string',

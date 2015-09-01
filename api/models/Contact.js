@@ -14,7 +14,8 @@ module.exports = {
       required: true
     },
     email: {
-      type: 'string'
+      type: 'string',
+      email: true
     },
     streeetad: {
       type: 'string'
