@@ -1,0 +1,38 @@
+<h2>{{person.firstname}} {{person.lastname}}
+<span ng-repeat="category in person.categories" class="label label-info pull-right category"> {{category.name}}</span></h2>
+
+
+<div class="panel panel-warning">
+  <div class="panel-heading">Notes</div>
+  <div class="panel-body">{{person.notes}}</div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">Contact Info</div>
+
+<div class="panel-body" ng-repeat="contact in person.contacts">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.streetad}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.state}}</td>
+        <td>{{contact.zip}}</td>
+        <td>{{contact.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

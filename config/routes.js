@@ -32,11 +32,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // '/': {
-  //   view: 'homepage'
-  // }
+  '/': 'PagesController.index',
 
-  'post /person/:id/addcategory' : 'PersonController.addCatbyName'
+  'post /person/:id/addcategory' : 'PersonController.addCatbyName',
 
   /***************************************************************************
   *                                                                          *
@@ -47,5 +45,12 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  "get *":{
+      controller:"PagesController",
+      action:"index",
+      skipAssets: true,
+      skipRegex: /^\/api\/.*$/
+  }
 
 };
