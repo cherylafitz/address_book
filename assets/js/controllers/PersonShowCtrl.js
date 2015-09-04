@@ -1,4 +1,4 @@
-AddressBookApp.controller('PersonShowCtrl', ['$scope','Person','$routeParams', function($scope,Person,$routeParams){
+AddressBookApp.controller('PersonShowCtrl', ['$scope','Person','$routeParams','Contact', function($scope,Person,$routeParams,Contact){
 
   console.log('Person show controller');
 
@@ -7,5 +7,13 @@ AddressBookApp.controller('PersonShowCtrl', ['$scope','Person','$routeParams', f
   Person.get({id: $routeParams.id}).then(function(person){
     $scope.person = person;
   })
+
+
+
+
+
+  $scope.deleteContact = function(contact){
+    contact.$delete();
+  }
 
 }]);

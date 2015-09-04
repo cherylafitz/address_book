@@ -1,0 +1,29 @@
+<h1>New Contact Information</h1>
+
+<form ng-submit="addContact()" name="newContactForm" novalidate>
+  <div class="form-group" ng-class="{ 'has-error': newContactForm.name.$touched && newContactForm.name.$invalid }">
+    <label for="name">Name</label>
+    <input required ng-minlength="1" type="text" name="name" class="form-control" ng-model="contact.name">
+    <div ng-if="newContactForm.name.$touched" ng-messages="newContactForm.name.$error" class="help-block">
+      <div ng-messages-include="/views/messages.html"></div>
+    </div>
+  </div>
+
+  <div class="form-group" ng-class="{ 'has-error': newContactForm.email.$touched && newContactForm.email.$invalid }">
+    <label for="email">Email</label>
+    <input required ng-minlength="1" name="email" class="form-control" ng-model="contact.email">
+    <div ng-if="newContactForm.email.$touched" ng-messages="newContactForm.email.$error" class="help-block">
+      <div ng-messages-include="/views/messages.html"></div>
+    </div>
+  </div>
+
+  <div class="form-group" ng-class="{ 'has-error': newContactForm.phone.$touched && newContactForm.phone.$invalid }">
+    <label for="phone">Phone</label>
+    <textarea required ng-minlength="3" name="phone" class="form-control" ng-model="contact.phone"></textarea>
+    <div ng-if="newContactForm.phone.$touched" ng-messages="newContactForm.phone.$error" class="help-block">
+      <div ng-messages-include="/views/messages.html"></div>
+    </div>
+  </div>
+
+  <button ng-disabled="newContactForm.$invalid" type="submit" class="btn btn-primary">Create Post</button>
+</form>

@@ -1,4 +1,4 @@
-/**
+  /**
 * Contact.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
@@ -14,8 +14,8 @@ module.exports = {
       required: true
     },
     email: {
-      type: 'string',
-      email: true
+      type: 'string'
+      // email: true
     },
     streeetad: {
       type: 'string'

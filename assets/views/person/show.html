@@ -7,9 +7,12 @@
   <div class="panel-body">{{person.notes}}</div>
 </div>
 <div class="panel panel-primary">
-  <div class="panel-heading">Contact Info</div>
+  <div class="panel-heading">Contact Info
 
+  <a href="/person/{{person.id}}/contacts/new" class="pull-right btn btn-success glyphicon glyphicon-plus"></a></div>
 <div class="panel-body" ng-repeat="contact in person.contacts">
+  <a ng-click="deleteContact(contact)" class="pull-right btn btn-danger glyphicon glyphicon-trash"></a>
+  <a href="/person/{{person.id}}/contacts/new" class="pull-right btn btn-info glyphicon glyphicon-pencil"></a>
   <table class="table table-hover">
     <thead>
       <tr>
