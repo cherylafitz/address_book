@@ -11,8 +11,8 @@
 
   <a href="/person/{{person.id}}/contacts/new" class="pull-right btn btn-success glyphicon glyphicon-plus"></a></div>
 <div class="panel-body" ng-repeat="contact in person.contacts">
-  <a ng-click="deleteContact(contact)" class="pull-right btn btn-danger glyphicon glyphicon-trash"></a>
-  <a href="/person/{{person.id}}/contacts/new" class="pull-right btn btn-info glyphicon glyphicon-pencil"></a>
+  <a ng-click="deleteContact(contact.id)" class="pull-right btn btn-danger glyphicon glyphicon-trash"></a>
+  <a ng-click="editContact(contact)" class="pull-right btn btn-info glyphicon glyphicon-pencil"></a>
   <table class="table table-hover">
     <thead>
       <tr>
